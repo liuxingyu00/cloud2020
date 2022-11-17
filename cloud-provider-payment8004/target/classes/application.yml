@@ -1,0 +1,9 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: cloud-provider-payment
+  cloud:
+    zookeeper:
+      connect-string: 192.168.137.111:2181 # 连接 zookeeper 主机的 ip 地址和 zookeeper 服务端口号

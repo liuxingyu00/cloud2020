@@ -1,0 +1,15 @@
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: eureka7001.com # eureka 服务端的实例名称
+  client:
+    register-with-eureka: false # false 表示不向注册中心注册自己
+    fetch-registry: false # false 表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/ # 单机版
+      # defaultZone: http://eureka7002.com:7002/eureka/ # 集群版，表示将 7001 注册中心注册到 7002 上
+#  server:
+#    enable-self-preservation: false # Eureka 服务端是否开启自我保护模式（默认为 true）
+#    eviction-interval-timer-in-ms: 2000 # 每隔 2 秒扫描服务，超过了 2 秒，表示服务失效（单位为毫秒，默认为 60000）
